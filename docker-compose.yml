@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: umc9th-app
+    image: ${DOCKER_IMAGE}       # GitHub Actions에서 .env로 주입됨
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      DB_URL: ${DB_URL}
+      DB_USER: ${DB_USER}
+      DB_PW: ${DB_PW}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      JWT_EXPIRATION_ACCESS: ${JWT_EXPIRATION_ACCESS}
+      JWT_EXPIRATION_REFRESH: ${JWT_EXPIRATION_REFRESH}
