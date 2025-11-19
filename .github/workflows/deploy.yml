@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            echo "===== EC2 배포 시작 ====="
+            echo "====== EC2 배포 시작 ======"
 
             cd ~/UMC_9TH_CICD
 
